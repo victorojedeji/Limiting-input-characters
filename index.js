@@ -10,5 +10,5 @@ let cLimiter = counter.innerText;
 
 function handlekey() {
     cLimiter = Number(maxLength) - input.value.length;
-    counter.innerText = cLimiter
+    counter.innerText = cLimiter;
 };
