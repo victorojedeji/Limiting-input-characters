@@ -1,10 +1,14 @@
-const input = document.querySelector(".holder .input-field");
+let input = document.querySelector("#input-field");
+
+maxLength = input.getAttribute("maxlength");
+
 counter = document.querySelector(".holder .limiter");
-// maxLength = input.getAttribute("maxlength");
+
 
 let cLimiter = counter.innerText;
 
+
 function handlekey() {
-    console.log("pressed")
-    cLimiter += cLimiter - input.value.length
-}
+    cLimiter = Number(maxLength) - input.value.length;
+    counter.innerText = cLimiter
+};
